@@ -1,7 +1,6 @@
 # PRADA
 Repo for our paper, PRADA: Practical Black-Box Adversarial Attacks against Neural Ranking Models, by Chen Wu, Ruqing Zhang, Jiafeng Guo, Maarten De Rijke, Yixing Fan, and Xueqi Cheng.
 # Citation
-***
 If you find our work useful, please consider citing our paper:
 ```
 @article{wu2022prada,
