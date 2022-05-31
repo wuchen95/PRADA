@@ -129,9 +129,6 @@ class MSMARCODataset(Dataset):
 
     def __getitem__(self, item):
         '''
-        这里dataset是顺序读取内容的，如果是训练，就是准备好的q-d-pairs的内容，需要先看load_querydoc_pairs函数
-        :param item:
-        :return:
         '''
         qid, pid = self.qids[item], self.pids[item]
         query_input_ids, doc_input_ids = self.queries[qid], self.collection[pid]
@@ -147,7 +144,7 @@ class MSMARCODataset(Dataset):
             "docid" : pid
         }
         if self.mode == "train":
-            ## 需要获取一个item的label而不是整体的labels
+   
             label = self.labels[item]
             ret_val["label"] = label
         return ret_val
