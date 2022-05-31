@@ -90,7 +90,7 @@ def load_querydoc_pairs_attacked_docs(doc_path, mode):
 def load_querydoc_pairs_attacked_docs_cilidu(doc_path, mode):
     qids, pids, labels = [], [], []
     doc_token_dict = {}
-    tokenizer = BertTokenizer.from_pretrained('/data/users/wuchen/bert_pretrained_model/bert-base-uncased')
+    tokenizer = BertTokenizer.from_pretrained('your bert_tokenizer path')
 
     for line in open(doc_path):  # mode = dev
 
