@@ -16,7 +16,6 @@ from modeling import RankingBERT_Train
 from marcodoc.dataset import MSMARCODataset_file_qd, get_collate_function, CollectionDataset
 from myutils.word_recover.Bert_word_recover import BERTWordRecover
 from myutils.attacker.attacker import Attacker
-from mem_helper import occumpy_mem
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(format='%(asctime)s-%(levelname)s-%(name)s- %(message)s',
@@ -336,7 +335,6 @@ def main():
                        + '\t' + str(attacked_docs_score_dict[qid_docid])
             save_attacked_docs_f.write(to_write + '\n')
         attacked_docs_dict = {}
-        occumpy_mem('1')
 
 
 if __name__ == "__main__":
